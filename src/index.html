@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SitDownPls - Главная страница</title>
+  <link rel="shortcut icon" href="images/favicon.svg">
+
+  <!-- fonts -->
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="fonts/PlayfairDisplay-Black.woff2" as="font">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="main.css">
+
+
+  <!-- JavaScript -->
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="scripts/custom-select.js"></script>
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <div style="display: none;">
+    <!-- inject:sprites:svg -->
+    <!-- SVG-спрайт -->
+    <!-- endinject -->
+  </div>
+  <header class="header">
+    <!-- <div class="container header__container"> -->
+      <div class="grid header__grid">
+        <div class="background"></div>
+        <div class="header__city-block">
+          <label class="header__city-label" for="city">Ваш регион: </label>
+          <div class="custom-select header__city-select">
+          <select id="city" name="city">
+            <option>Город</option>
+            <option selected>Москва</option>
+            <option>Казань</option>
+            <option>Уфа</option>
+            <option>Пермь</option>
+
+          </select>
+          </div>
+
+        </div>
+
+        <div class="header__phone">
+          <a class="phone" href="tel:+74958854547">
+          <svg width="22" height="22">
+            <use href="#mdi_call"></use>
+          </svg><span>+7 (495) 885-45-47</span>
+        </a>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__listitem">
+              <a class="link header__link" href="#">О компании</a>
+            </li>
+            <li class="header__listitem">
+              <a class="link header__link" href="#">Гарантия и возврат</a>
+            </li>
+            <li class="header__listitem">
+              <a class="link header__link" href="#">Корпоративным клиентам</a>
+            </li>
+            <li class="header__listitem">
+              <a class="link header__link" href="#">Дизайн-решение</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__burger">
+          <button class="link burger__button">
+            <svg class="burger__image-on" width="24" height="24">
+              <use href="#burger-on"></use>
+            </svg>
+            <svg class="burger__image-off" width="24" height="24">
+              <use href="#burger-off"></use>
+            </svg>
+          </button>
+          <nav class="burger__menu">
+            <ul class="burger__menu-list">
+              <li class="burger__menu-item">
+                <a class="link burger__menu-link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="burger__menu-item">
+                <a class="link burger__menu-link" href="#">Магазины</a>
+              </li>
+              <li class="burger__menu-item">
+                <a class="link burger__menu-link" href="#">Шоу-рум</a>
+              </li>
+              <li class="burger__menu-item">
+                <a class="link burger__menu-link" href="#">Доставка и оплата</a>
+              </li>
+              <li class="burger__menu-item">
+                <a class="link burger__menu-link" href="#">Дисконт</a>
+              </li>
+              <li class="burger__menu-item">
+                <a class="link burger__menu-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__logo">
+          <a class="link" href="#">
+            <h1 class="header__title">
+              <svg width="187" height="27">
+                <title>Интернет-магазин мебели «SitDownPls»</title>
+                <use href="#logo"></use>
+              </svg>
+            </h1>
+          </a>
+        </div>
+
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="link header__menu-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="link header__menu-link" href="#">Магазины</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="link header__menu-link" href="#">Шоу-рум</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="link header__menu-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="link header__menu-link" href="#">Дисконт</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="link header__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="form header__search-form">
+          <div class="header__search-panel">
+            <input class="text-input header__search-field" placeholder="Я хочу купить...">
+            <svg class="header__search-icon" width="20" height="20">
+              <use href="#search"></use>
+            </svg>
+            <button type="submit" class="button-next header__submit" aria-label="Найти">
+              <svg class="svg-icon" width="32" height="32">
+                <use href="#arrow"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="custom-select header__select">
+            <select name="categories">
+              <option value="0">Категория</option>
+              <option value="1">Диваны</option>
+              <option value="2">Кресла</option>
+              <option value="3">Пуфы</option>
+              <option value="4">Кровати</option>
+              <option value="5">Тумбы</option>
+              <option value="6">Комоды</option>
+              <option value="7">Стулья</option>
+              <option value="8">Столы</option>
+              <option value="9">Аксессуары</option>
+            </select>
+          </div>
+        </div>
+        <div class="header__account-panel">
+          <a href="#" class="icon-link header__account"  aria-label="Личный кабинет">
+            <svg width="28" height="28">
+              <use href="#user"></use>
+            </svg>
+          </a>
+          <a href="#" class="icon-link header__cart" data-count="0" aria-label="Корзина">
+            <svg width="30" height="28">
+              <use href="#shopping_cart"></use>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+      <!-- </div> -->
+
+
+  </header>
+  <main>
+    <section class="hero">
+       <!-- Swiper -->
+      <div class="swiper hero__swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+
+            <picture class="picture hero__picture">
+              <source media="(max-width:425px)" data-srcset="images/slider/320/slide01.jpg">
+              <source media="(max-width:1023px)" data-srcset="images/slider/768/slide01.jpg">
+              <source media="(max-width:1320px)" data-srcset="images/slider/1024/slide01.jpg">
+              <source media="(min-width:1321px)" data-srcset="images/slider/1920/slide01.jpg">
+              <img class="picture__img about__img lazy" data-src="images/slider/1920/slide01.jpg" alt="Фотография">
+            </picture>
+
+            <div class="container hero__container">
+              <h2 class="hero__title">Скидка 15% на&nbsp;первую покупку</h2>
+              <button class="button button-primary hero__button">Получить!</button>
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+              <picture class="picture hero__picture">
+                <source media="(max-width:425px)" data-srcset="images/slider/320/slide02.jpg">
+                <source media="(max-width:1023px)" data-srcset="images/slider/768/slide02.jpg">
+                <source media="(max-width:1320px)" data-srcset="images/slider/1024/slide02.jpg">
+                <source media="(min-width:1321px)" data-srcset="images/slider/1920/slide02.jpg">
+                <img class="picture__img about__img lazy" data-src="images/slider/1920/slide02.jpg" alt="Фотография">
+              </picture>
+
+              <div class="container hero__container">
+                <h2 class="hero__title">1000+ аксессуаров для дома</h2>
+                <button class="button button-primary hero__button">Получить</button>
+              </div>
+
+          </div>
+
+          <div class="swiper-slide">
+            <picture class="picture hero__picture">
+              <source media="(max-width:425px)" data-srcset="images/slider/320/slide03.jpg">
+              <source media="(max-width:1023px)" data-srcset="images/slider/768/slide03.jpg">
+              <source media="(max-width:1320px)" data-srcset="images/slider/1024/slide03.jpg">
+              <source media="(min-width:1321px)" data-srcset="images/slider/1920/slide03.jpg">
+              <img class="picture__img about__img lazy" data-src="images/slider/1920/slide03.jpg" alt="Фотография">
+            </picture>
+
+            <div class="container hero__container">
+              <h2 class="hero__title hero__title--light">Коллекция стильного и яркого текстиля</h2>
+              <button class="button button-primary hero__button">Получить</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination hero__swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="offers">
+      <div class="container offers__container">
+        <div class="title-container offers__title-container">
+          <h2 class="title offers__title">Специальные предложения</h2>
+          <div class="swiper-controls offers__swiper-controls">
+
+            <button class="button-prev offers__button-prev" disabled>
+              <svg class="svg-icon" width="32" height="32">
+                <use href="#arrow"></use>
+              </svg>
+            </button>
+
+            <button class="button-next offers__button-next">
+              <svg class="svg-icon" width="32" height="32">
+                <use href="#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper offers__swiper">
+          <div class="swiper-wrapper offers__swiper-wrapper">
+
+            <div class="swiper-slide card offers__card">
+              <div class="card__container">
+                <div class="card__image-container">
+                  <img class="card__image" src="images/offers/01.png" alt="Кресло велюровое “X-24”">
+                </div>
+                <div class="card__content">
+                  <div class="card__content-main">
+                    <span class="card__title">Кресло велюровое “X-24”</span>
+                    <div class="card__price-container">
+                      <span class="card__price card__price--new">15 990 руб</span>
+                      <span class="card__price card__price--old">24 990 руб</span>
+                    </div>
+                    <button class="button button-secondary card__button">Купить</button>
+                    <div class="discount-label card__discount-label">- 9 000</div>
+                  </div>
+                  <div class="card__content-extra">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide card offers__card offers__card--big">
+              <div class="card__container">
+                <div class="card__image-container">
+                  <img class="card__image" src="images/offers/02.png" alt="Диван тканевый “Z-44”">
+                </div>
+                <div class="card__content">
+                  <div class="card__content-main">
+                    <span class="card__title">Диван тканевый “Z-44”</span>
+                    <div class="card__price-container">
+                      <span class="card__price card__price--new">22 990 руб</span>
+                      <span class="card__price card__price--old">32 990 руб</span>
+                    </div>
+                    <button class="button button-secondary card__button">Купить</button>
+                    <div class="discount-label card__discount-label">- 10 000</div>
+                  </div>
+                  <div class="card__content-extra">
+                    <img class="card__extra-image" src="images/offers/drawings/02.png" width="230" height="107" alt="Схема">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card offers__card">
+              <div class="card__container">
+                <div class="card__image-container">
+                  <img class="card__image" src="images/offers/03.png" alt="Будильник  “Quartz-23”">
+                </div>
+                <div class="card__content">
+                  <div class="card__content-main">
+                    <span class="card__title">Будильник  “Quartz-23”</span>
+                    <div class="card__price-container">
+                      <span class="card__price card__price--new">1 290 руб</span>
+                      <span class="card__price card__price--old">1 890 руб</span>
+                    </div>
+                    <button class="button button-secondary card__button">Купить</button>
+                    <div class="discount-label card__discount-label">- 600</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card offers__card">
+              <div class="card__container">
+                <div class="card__image-container">
+                  <img class="card__image" src="images/offers/04.png" alt="Мини-скульптура “Oh my deer”">
+                </div>
+                <div class="card__content">
+                  <div class="card__content-main">
+                    <span class="card__title">Мини-скульптура “Oh my deer”</span>
+                    <div class="card__price-container">
+                      <span class="card__price card__price--new">690 руб</span>
+                      <span class="card__price card__price--old">990 руб</span>
+                    </div>
+                    <button class="button button-secondary card__button">Купить</button>
+                    <div class="discount-label card__discount-label">- 300</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card offers__card offers__card--big">
+              <div class="card__container">
+                <div class="card__image-container">
+                  <img class="card__image" src="images/offers/05.png" alt="Диван вел-флок “Z-85”">
+                </div>
+                <div class="card__content">
+                  <div class="card__content-main">
+                    <span class="card__title">Диван вел-флок “Z-85”</span>
+                    <div class="card__price-container">
+                      <span class="card__price card__price--new">22 990 руб</span>
+                      <span class="card__price card__price--old">32 990 руб</span>
+                    </div>
+                    <button class="button button-secondary card__button">Купить</button>
+                    <div class="discount-label card__discount-label">- 10 000</div>
+                  </div>
+                  <div class="card__content-extra">
+                    <img class="card__extra-image" src="images/offers/drawings/05.png" width="230" height="107" alt="Схема">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card offers__card">
+              <div class="card__container">
+                <div class="card__image-container">
+                  <img class="card__image" src="images/offers/06.png" alt="Термометр + гидрометр “H-18”">
+                </div>
+                <div class="card__content">
+                  <div class="card__content-main">
+                    <span class="card__title">Термометр + гидрометр “H-18”</span>
+                    <div class="card__price-container">
+                      <span class="card__price card__price--new">1 390 руб</span>
+                      <span class="card__price card__price--old">2 090 руб</span>
+                    </div>
+                    <button class="button button-secondary card__button">Купить</button>
+                    <div class="discount-label card__discount-label">- 700</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="top-rate">
+      <div class="container top-rate__container">
+        <h2 class="title top-rate__title">Высокий рейтинг</h2>
+        <ul class="grid top-rate__grid">
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_01.png" alt="Диван кожаный “R-94”">
+              </div>
+              <span class="card__title">Диван кожаный <span class="nowrap">“R-94”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">94 990 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_02.png" alt="Диван апартековый “T-75”">
+              </div>
+              <span class="card__title">Диван апартековый <span class="nowrap">“T-75”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">69 990 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_03.png" alt="Диван тканевый “D-31”">
+              </div>
+              <span class="card__title">Диван тканевый <span class="nowrap">“D-31”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">28 490 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_04.png" alt="Диван велюровый “Y-68”">
+              </div>
+              <span class="card__title">Диван велюровый <span class="nowrap">“Y-68”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">22 990 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_05.png" alt="Диван из шинила “W-95”">
+              </div>
+              <span class="card__title">Диван из&nbsp;шинила <span class="nowrap">“W-95”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">22 990 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_06.png" alt="Диван флоковый “G-41”">
+              </div>
+              <span class="card__title">Диван флоковый <span class="nowrap">“G-41”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">17 990 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_07.png" alt="Диван шиниловый “V-43”">
+              </div>
+              <span class="card__title">Диван шиниловый <span class="nowrap">“V-43”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">19 990 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide card top-rate__card">
+            <div class="card__container">
+              <div class="card__image-container">
+                <img class="card__image" src="images/highrated/sofa_08.png" alt="Диван велюровый “S-99”">
+              </div>
+              <span class="card__title">Диван велюровый <span class="nowrap">“S-99”</span></span>
+              <div class="card__price-container">
+                <span class="card__price">19 990 руб</span>
+              </div>
+              <button class="button button-secondary card__button">Купить</button>
+              <div class="card__rating" data-rating="5,0">
+                <svg width="16" height="15">
+                  <use href="#star"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="button button-primary top-rate__button">Смотреть больше товаров</button>
+      </div>
+    </section>
+    <section class="banner">
+      <div class="container banner__container">
+        <h2 class="title banner__title"><strong>Оксфорд 1950</strong><br>
+          Новая коллекция изысканных кресел
+        </h2>
+        <button class="button button-primary banner__button">Ознакомиться</button>
+      </div>
+    </section>
+    <section class="top-categories">
+      <div class="container">
+
+        <h2 class="title top-categoties__title">Топ категории</h2>
+
+        <ul class="grid top-categories__grid">
+
+          <li class="top-categories__item top-categories__item--sofa">
+            <article class="top-categories__cover">
+              <div class="top-categories__heading">
+                <ul class="top-categories__subcategories">
+                  <li class="top-categories__subcategory">Прямые</li>
+                  <li class="top-categories__subcategory">Угловые</li>
+                  <li class="top-categories__subcategory">Модульные</li>
+                </ul>
+                <h3 class="top-categories__title">Диваны
+                  <a href="#" class="link top-categories__link">
+                    <span class="link__text">В каталог</span>
+                    <svg width="22" height="22">
+                      <use class="ellipse" href="#ellipse"></use>
+                      <use class="arrow" href="#arrow"></use>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+              <div class="top-categories__image-container">
+                <picture class="picture top-categories__picture">
+                  <source media="(max-width:425px)" data-srcset="images/categories/320/sofa.png">
+                  <source media="(max-width:1023px)" data-srcset="images/categories/768/sofa.png">
+                  <source media="(max-width:1320px)" data-srcset="images/categories/1024/sofa.png">
+                  <source media="(min-width:1321px)" data-srcset="images/categories/1920/sofa.png">
+                  <img class="picture__img about__img lazy" data-src="images/categories/1920/sofa.png" alt="Фотография">
+                </picture>
+              </div>
+              <div class="top-categories__footer"></div>
+            </article>
+
+          </li>
+          <li class="top-categories__item top-categories__item--armchair">
+            <article class="top-categories__cover">
+              <div class="top-categories__heading">
+                <ul class="top-categories__subcategories">
+                  <li class="top-categories__subcategory">Мягкие</li>
+                  <li class="top-categories__subcategory">Кресла-кровати</li>
+                </ul>
+                <h3 class="top-categories__title">Кресла
+                  <a href="#" class="link top-categories__link">
+                    <span class="link__text">В каталог</span>
+                    <svg width="22" height="22">
+                      <use class="ellipse" href="#ellipse"></use>
+                      <use class="arrow" href="#arrow"></use>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+              <div class="top-categories__image-container">
+                <picture class="picture top-categories__picture">
+                  <source media="(max-width:425px)" data-srcset="images/categories/320/armchair.png">
+                  <source media="(max-width:1023px)" data-srcset="images/categories/768/armchair.png">
+                  <source media="(max-width:1320px)" data-srcset="images/categories/1024/armchair.png">
+                  <source media="(min-width:1321px)" data-srcset="images/categories/1920/armchair.png">
+                  <img class="picture__img about__img lazy" data-src="images/categories/1920/armchair.png" alt="Фотография">
+                </picture>
+              </div>
+              <div class="top-categories__footer"></div>
+            </article>
+          </li>
+
+          <li class="top-categories__item top-categories__item--bed">
+            <article class="top-categories__cover">
+              <div class="top-categories__heading">
+                <ul class="top-categories__subcategories">
+                  <li class="top-categories__subcategory">Односпальные</li>
+                  <li class="top-categories__subcategory">Двуспальные</li>
+                </ul>
+                <h3 class="top-categories__title">Кровати
+                  <a href="#" class="link top-categories__link">
+                    <span class="link__text">В каталог</span>
+                    <svg width="22" height="22">
+                      <use class="ellipse" href="#ellipse"></use>
+                      <use class="arrow" href="#arrow"></use>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+              <div class="top-categories__image-container">
+                <picture class="picture top-categories__picture">
+                  <source media="(max-width:425px)" data-srcset="images/categories/320/bed.png">
+                  <source media="(max-width:768px)" data-srcset="images/categories/768/bed.png">
+                  <source media="(max-width:1320px)" data-srcset="images/categories/1024/bed.png">
+                  <source media="(min-width:1321px)" data-srcset="images/categories/1920/bed.png">
+                  <img class="picture__img about__img lazy" data-src="images/categories/1920/bed.png" alt="Фотография">
+                </picture>
+              </div>
+              <div class="top-categories__footer"></div>
+            </article>
+          </li>
+
+          <li class="top-categories__item top-categories__item--dresser">
+            <article class="top-categories__cover">
+              <div class="top-categories__heading">
+                <ul class="top-categories__subcategories">
+                  <li class="top-categories__subcategory">Тумбы</li>
+                  <li class="top-categories__subcategory">Комоды</li>
+                </ul>
+                <h3 class="top-categories__title">Тумбы и комоды
+                  <a href="#" class="link top-categories__link">
+                    <span class="link__text">В каталог</span>
+                    <svg width="22" height="22">
+                      <use class="ellipse" href="#ellipse"></use>
+                      <use class="arrow" href="#arrow"></use>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+              <div class="top-categories__image-container">
+                <picture class="picture top-categories__picture">
+                  <source media="(max-width:425px)" data-srcset="images/categories/320/dresser.png">
+                  <source media="(max-width:1023px)" data-srcset="images/categories/768/dresser.png">
+                  <source media="(max-width:1320px)" data-srcset="images/categories/1024/dresser.png">
+                  <source media="(min-width:1321px)" data-srcset="images/categories/1920/dresser.png">
+                  <img class="picture__img about__img lazy" data-src="images/categories/1920/dresser.png" alt="Фотография">
+                </picture>
+              </div>
+              <div class="top-categories__footer"></div>
+            </article>
+          </li>
+
+          <li class="top-categories__item top-categories__item--chair">
+            <article class="top-categories__cover">
+              <div class="top-categories__heading">
+                <ul class="top-categories__subcategories">
+                  <li class="top-categories__subcategory">Деревянные</li>
+                  <li class="top-categories__subcategory">Металлокаркас</li>
+                </ul>
+                <h3 class="top-categories__title">Стулья
+                  <a href="#" class="link top-categories__link">
+                    <span class="link__text">В каталог</span>
+                    <svg width="22" height="22">
+                      <use class="ellipse" href="#ellipse"></use>
+                      <use class="arrow" href="#arrow"></use>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+              <div class="top-categories__image-container">
+                <picture class="picture top-categories__picture">
+                  <source media="(max-width:425px)" data-srcset="images/categories/320/chair.png">
+                  <source media="(max-width:1023px)" data-srcset="images/categories/768/chair.png">
+                  <source media="(max-width:1320px)" data-srcset="images/categories/1024/chair.png">
+                  <source media="(min-width:1321px)" data-srcset="images/categories/1920/chair.png">
+                  <img class="picture__img about__img lazy" data-src="images/categories/1920/chair.png" alt="Фотография">
+                </picture>
+              </div>
+              <div class="top-categories__footer"></div>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <section class="useful">
+      <div class="container useful__container">
+
+        <div class="title-container useful__title-container">
+          <h2 class="title useful__title">Полезное</h2>
+          <div class="swiper-controls useful__swiper-controls">
+
+            <button class="button-prev useful__button-prev" disabled>
+              <svg class="svg-icon" width="32" height="32">
+                <use href="#arrow"></use>
+              </svg>
+            </button>
+
+            <button class="button-next useful__button-next" disabled>
+              <svg class="svg-icon" width="32" height="32">
+                <use href="#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper useful__swiper">
+          <div class="swiper-wrapper useful__swiper-wrapper">
+
+            <div class="card swiper-slide useful__item">
+              <div class="useful__item-container">
+                <div class="useful__image-container">
+                  <img class="useful__image" src="images/useful/useful01.jpg" alt="Иллюстрация">
+                </div>
+
+                <div class="useful__content">
+                  <p class="useful__text">
+                    И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?
+                  </p>
+                </div>
+                <button class="button button-secondary useful__button">Читать</button>
+              </div>
+            </div>
+
+            <div class="swiper-slide useful__item">
+              <div class="useful__item-container">
+                <div class="useful__image-container">
+                  <img class="useful__image" src="images/useful/useful02.jpg" alt="Иллюстрация">
+                </div>
+
+                <div class="useful__content">
+                  <p class="useful__text">
+                    Как принято считать, некоторые особенности приносят несомненную пользу обществу?
+                  </p>
+                  <button class="button button-secondary useful__button">Читать</button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide useful__item">
+              <div class="useful__item-contaner">
+                <div class="useful__image-container">
+                  <img class="useful__image" src="images/useful/useful03.jpg" alt="Иллюстрация">
+                </div>
+
+                <div class="useful__content">
+                  <p class="useful__text">
+                    Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?
+                  </p>
+                  <button class="button button-secondary useful__button">Читать</button>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="swiper-slide useful__item">
+              <div class="useful__item-container">
+                <div class="useful__image-container">
+                  <img class="useful__image" src="images/useful/useful04.jpg" alt="Иллюстрация">
+                </div>
+
+                <div class="useful__content">
+                  <p class="useful__text">
+                    Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?
+                  </p>
+                  <button class="button button-secondary useful__button">Читать</button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide useful__item">
+              <div class="useful__item-container">
+                <div class="useful__image-container">
+                  <img class="useful__image" src="images/useful/useful05.jpg" alt="Иллюстрация">
+                </div>
+
+                <div class="useful__content">
+                  <p class="useful__text">
+                    Как принято считать, некоторые особенности приносят несомненную пользу обществу?
+                  </p>
+                  <button class="button button-secondary useful__button">Читать</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container contacts__container">
+        <h2 class="title contacts__title">Мы всегда вам рады!</h2>
+        <div class="grid contacts__form-container">
+          <form class="form contacts__form">
+            <div class="form__description">
+              <span class="form__description-text">Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.</span>
+              <div class="tooltip contacts-tooltip" data-text="Реплицированные с зарубежных источников, исследования формируют глобальную сеть.">
+                <svg width="14" height="14">
+                  <use href="#tooltip-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form__input-container">
+              <input class="text-input form__input" type="text" placeholder="Как вас зовут?">
+            </div>
+
+            <div class="form__input-container">
+              <input class="text-input form__input" type="text" placeholder="Ваш телефон">
+            </div>
+
+            <div class="form__input-container">
+              <input class="text-input form__input" type="text" placeholder="Ваш e-mail">
+            </div>
+
+            <input type="submit" class="button button-primary form__submit ">
+            <label class="custom-checkbox form__label">
+              <input type="checkbox" class="custom-checkbox__input" name="category" checked>
+              <span class="checkmark checkmark--small custom-checkbox__text">Принимаю <a href="" class="link form__link">пользовательское соглашение</a>
+              </span>
+            </label>
+          </form>
+          <div class="contacts__image-block">
+            <picture class="picture contacts__picture">
+              <source media="(max-width:1023px)" data-srcset="images/contacts/background_768.jpg">
+              <source media="(max-width:1320px)" data-srcset="images/contacts/background_1024.jpg">
+              <source media="(min-width:1321px)" data-srcset="images/contacts/background_1920.jpg">
+              <img class="contacts__image lazy" data-src="images/contacts/background_1920.jpeg" alt="Фоновое изображение">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__left">
+        <a class="link" href="#">
+        <svg width="187" height="27">
+          <title>Интернет-магазин мебели «SitDownPls»</title>
+          <use href="#logo"></use>
+        </svg></a>
+
+        <div class="footer__social-links">
+          <a class="icon-link" href="#" aria-label="Facebook">
+            <svg width="30" height="30">
+              <use href="#fb"></use>
+            </svg>
+          </a>
+          <a class="icon-link" href="#" aria-label="ВКонтакте">
+            <svg width="30" height="30">
+              <use href="#vk"></use>
+            </svg>
+          </a>
+          <a class="icon-link" href="#" aria-label="Instagram">
+            <svg width="30" height="30">
+              <use href="#instagram"></use>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__column">
+          <h4 class="footer__nav-title">О нас</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">О компании</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Блог</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--push-left-34">
+          <h4 class="footer__nav-title">Услуги</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Доставка</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Рассрочка и кредит</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Сборка и установка</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--push-left-14">
+          <h4 class="footer__nav-title">Связь с нами</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Обратная связь</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__nav-title">Сотрудничество</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Поставщикам</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Оптовикам</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link footer__link" href="">Карьера</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="footer__bottom">
+        <!-- <div class="container"> -->
+          <div class="footer__copyrights">SDP®&nbsp;&nbsp;&nbsp;2011-2021</div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "dpo_weblayout_advanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.skillbox.ru/dmitrii_goff/dpo_weblayout_advanced.git"
+  },
+  "author": "Dmitriy Goff",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.27.11",
+    "del": "^7.0.0",
+    "eslint": "^8.33.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-count": "^1.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-image": "^6.3.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-notify": "^4.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.1",
+    "gulp-terser": "^2.1.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "sass": "^1.58.0",
+    "yargs": "^17.6.2"
+  }
+}

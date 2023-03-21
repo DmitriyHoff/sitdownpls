@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $grid-gap;
+}
+.header__grid {
+  display: grid;
+  grid-template-columns: calc((100% - $max-width) / 2) repeat(12, 1fr) calc((100% - $max-width) / 2);
+  grid-template-rows: 50px 91px 60px;
+  gap: 0;
+  align-items: center;
+}
+
+.footer__grid {
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: calc((100% - $max-width) / 2) repeat(12, 1fr) calc((100% - $max-width) / 2);
+  grid-template-rows: 1fr 30px;
+}
+.catalog__grid {
+  grid-template-columns: repeat(9, 1fr);
+}
